@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahk.cipherchatjavafx_client.Controllers.contact">
+   <children>
+      <ImageView fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/Profile.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Name" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Message" />
+         </children>
+      </VBox>
+      <Pane prefHeight="62.0" prefWidth="77.0" HBox.hgrow="ALWAYS" />
+      <Pane prefHeight="43.0" prefWidth="42.0">
+         <children>
+            <Circle fill="#00ff2f" layoutX="21.0" layoutY="31.0" radius="13.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" />
+            <Text layoutX="16.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="10.0" />
+         </children>
+      </Pane>
+   </children>
+</HBox>
