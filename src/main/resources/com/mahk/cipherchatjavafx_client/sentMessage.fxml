@@ -8,19 +8,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahk.cipherchatjavafx_client.Controllers.Message">
    <children>
       <VBox alignment="CENTER_RIGHT">
          <children>
-            <Label text="Lorem Ispum" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12.00 a.m.">
+            <Label fx:id="Message" text="Lorem Ispum" />
+            <Text fx:id="Time" strokeType="OUTSIDE" strokeWidth="0.0" text="12.00 a.m.">
                <font>
                   <Font size="10.0" />
                </font>
             </Text>
          </children>
       </VBox>
-      <ImageView fitHeight="56.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ProfileImg" fitHeight="56.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/Profile.png" />
          </image>
