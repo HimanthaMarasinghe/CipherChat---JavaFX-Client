@@ -12,6 +12,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.util.HashMap;
+
 public class LogIn {
 
     @FXML
@@ -42,7 +44,9 @@ public class LogIn {
             alert.showAndWait();
         }
 
-        String json = String.format("{\"name\":\"%s\", \"password\":\"%s\"}", usernameInput, passwordInput);
+        HashMap<String, Object> json = new HashMap<>();
+        json.put("name", usernameInput);
+        json.put("password", passwordInput);
         String postResponse = ApiRequest.sendPost("login", json);
 
         if (postResponse.contains("token")) {

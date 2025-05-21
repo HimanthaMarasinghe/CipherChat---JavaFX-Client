@@ -1,8 +1,10 @@
 package com.mahk.cipherchatjavafx_client.util;
 
+import com.google.gson.Gson;
+
 import java.net.URI;
 import java.net.http.*;
-import java.util.Map;
+import java.util.HashMap;
 
 public class ApiRequest {
 
@@ -19,7 +21,9 @@ public class ApiRequest {
         return response.body();
     }
 
-    public static String sendPost(String url, String jsonBody) throws Exception {
+    public static String sendPost(String url, HashMap<String, Object> data) throws Exception {
+        Gson gson = new Gson();
+        String jsonBody = gson.toJson(data);
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI(baseUrl + url))
                 .header("Content-Type", "application/json")
